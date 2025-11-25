@@ -42,7 +42,7 @@ class SignUp extends StatelessWidget {
                     style: TextStyle(
                       color: Color(0xff8F8667),
                       fontFamily: "Tajawal",
-                      fontSize: 24,
+                      fontSize: 22,
                     ),
                   ),
                   Padding(
@@ -108,6 +108,29 @@ class SignUp extends StatelessWidget {
                     hint: "Enter your password again",
                   ),
                   SizedBox(height: 20),
+                  Align(
+                    alignment: Alignment.center,
+                    child: SizedBox(
+                      width: size.width*0.35,
+                      height: size.height*0.06,
+                      child: ElevatedButton(
+                        onPressed: (){}, 
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff444326),
+                          elevation: 10,                          
+                        ),
+                        child: Text(
+                          "Sign up",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "Tajawal",
+                            fontSize: 20,
+                          ),
+                        )
+                        ),
+                    ),
+                  ),
+                  SizedBox(height: 30),
                   RichText(
                     text: TextSpan(
                       children: [

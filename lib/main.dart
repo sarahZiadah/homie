@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homie/view/pages/sign_in.dart';
 import 'package:homie/view/pages/sign_up.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class Homie extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      home: SignIn(),
     );
   }
 }
