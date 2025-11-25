@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homie/view/widget/labeled_input_box.dart';
 
-
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
 
@@ -27,9 +26,7 @@ class SignUp extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: size.width * 0.07,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: size.width * 0.07),
               child: ListView(
                 children: [
                   Text(
@@ -72,8 +69,67 @@ class SignUp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  LabeledInputBox(label: "Full name", hint: "Enter your full name"),
+                  LabeledInputBox(
+                    label: "Full name",
+                    hint: "Enter your full name",
+                  ),
+                  LabeledInputBox(
+                    label: "Phone number",
+                    hint: "+963 000 000 000",
+                  ),
                   LabeledInputBox(label: "Birthday", hint: "xxxx/xx/xx"),
+                  SizedBox(height: 10),
+                  Text(
+                    "ID picture",
+                    style: TextStyle(
+                      color: Color(0xff444326),
+                      fontFamily: "Tajawal",
+                      fontSize: 22,
+                    ),
+                  ),
+                  Container(
+                    height: size.height * 0.06,
+                    width: size.width * 0.8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      border: Border.all(color: Color(0xff7D7A45), width: 3),
+                      color: Colors.white.withAlpha(300),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    alignment: Alignment.centerRight,
+                    child: Icon(Icons.add),
+                  ),
+                  LabeledInputBox(
+                    label: "Password",
+                    hint: "Enter your password",
+                  ),
+                  LabeledInputBox(
+                    label: "Confirm password",
+                    hint: "Enter your password again",
+                  ),
+                  SizedBox(height: 20),
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Already have an account?",
+                          style: TextStyle(
+                            color: Color(0xff7D7A45),
+                            fontSize: 22,
+                            fontFamily: "Tajawal",
+                          ),
+                        ),
+                        TextSpan(
+                          text: " Sign in",
+                          style: TextStyle(
+                            color: Color(0xff444326),
+                            fontSize: 22,
+                            fontFamily: "Tajawal",
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
