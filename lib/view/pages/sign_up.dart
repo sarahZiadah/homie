@@ -3,6 +3,7 @@ import 'package:homie/view/widget/labeled_input_box.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
+  static final id= "SignUp";
 
   @override
   Widget build(BuildContext context) {
@@ -131,26 +132,31 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 30),
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "Already have an account?",
-                          style: TextStyle(
-                            color: Color(0xff7D7A45),
-                            fontSize: 22,
-                            fontFamily: "Tajawal",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "Already have an account?",
+                            style: TextStyle(
+                              color: Color(0xff7D7A45),
+                              fontSize: 22,
+                              fontFamily: "Tajawal",
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text: " Sign in",
-                          style: TextStyle(
-                            color: Color(0xff444326),
-                            fontSize: 22,
-                            fontFamily: "Tajawal",
+                          TextSpan(
+                            text: " Sign in",
+                            style: TextStyle(
+                              color: Color(0xff444326),
+                              fontSize: 22,
+                              fontFamily: "Tajawal",
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ],

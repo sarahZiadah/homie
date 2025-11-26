@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homie/view/pages/sign_up.dart';
 import 'package:homie/view/widget/labeled_input_box.dart';
 
 class SignIn extends StatelessWidget {
@@ -77,26 +78,31 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 30),
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "Don't have an account?",
-                          style: TextStyle(
-                            color: Color(0xff7D7A45),
-                            fontSize: 22,
-                            fontFamily: "Tajawal",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, SignUp.id);
+                    },
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "Don't have an account?",
+                            style: TextStyle(
+                              color: Color(0xff7D7A45),
+                              fontSize: 22,
+                              fontFamily: "Tajawal",
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text: " Sign up",
-                          style: TextStyle(
-                            color: Color(0xff444326),
-                            fontSize: 22,
-                            fontFamily: "Tajawal",
+                          TextSpan(
+                            text: " Sign up",
+                            style: TextStyle(
+                              color: Color(0xff444326),
+                              fontSize: 22,
+                              fontFamily: "Tajawal",
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ],

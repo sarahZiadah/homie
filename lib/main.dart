@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:homie/view/pages/sign_in.dart';
 import 'package:homie/view/pages/sign_up.dart';
 
 void main() {
-  runApp(const Homie());
+  runApp(ProviderScope(child: const Homie()));
 }
 
 class Homie extends StatelessWidget {
@@ -12,6 +13,9 @@ class Homie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        SignUp.id: (context) => SignUp()
+      },
       debugShowCheckedModeBanner: false,
       home: SignIn(),
     );
