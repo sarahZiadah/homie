@@ -3,7 +3,7 @@ import 'package:homie/view/widget/labeled_input_box.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
-  static final id= "SignUp";
+  static final id = "SignUp";
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +49,27 @@ class SignUp extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: size.height * 0.02),
                     child: Center(
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Color(0xffCECCC9),
-                        child: Icon(
-                          Icons.person,
-                          size: 70,
-                          color: Colors.white,
-                        ),
+                      child: Stack(
+                        children: [
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundColor: Color(0xffCECCC9),
+                            child: Icon(
+                              Icons.person,
+                              size: 70,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Positioned(
+                            bottom: -5,
+                            right: -5,
+                            child: Icon(
+                              Icons.add,
+                              size: 40,
+                              color: Color(0xff444326), 
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -112,13 +125,13 @@ class SignUp extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: SizedBox(
-                      width: size.width*0.35,
-                      height: size.height*0.06,
+                      width: size.width * 0.35,
+                      height: size.height * 0.06,
                       child: ElevatedButton(
-                        onPressed: (){}, 
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xff444326),
-                          elevation: 10,                          
+                          elevation: 10,
                         ),
                         child: Text(
                           "Sign up",
@@ -127,8 +140,8 @@ class SignUp extends StatelessWidget {
                             fontFamily: "Tajawal",
                             fontSize: 20,
                           ),
-                        )
                         ),
+                      ),
                     ),
                   ),
                   SizedBox(height: 30),
