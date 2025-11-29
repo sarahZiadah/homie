@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homie/view/pages/sign_up.dart';
+import 'package:homie/view/widget/custom_button.dart';
 import 'package:homie/view/widget/labeled_input_box.dart';
 
 class SignIn extends StatelessWidget {
@@ -55,28 +56,7 @@ class SignIn extends StatelessWidget {
                     hint: "Enter your password",
                   ),
                   SizedBox(height: 20),
-                  Align(
-                    alignment: Alignment.center,
-                    child: SizedBox(
-                      width: size.width*0.35,
-                      height: size.height*0.06,
-                      child: ElevatedButton(
-                        onPressed: (){}, 
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff444326),
-                          elevation: 10,                          
-                        ),
-                        child: Text(
-                          "Sign in",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: "Tajawal",
-                            fontSize: 20,
-                          ),
-                        )
-                        ),
-                    ),
-                  ),
+                  CustomButton(name: "Sign in"),
                   SizedBox(height: 30),
                   GestureDetector(
                     onTap: () {

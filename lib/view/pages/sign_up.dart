@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homie/view/widget/custom_button.dart';
 import 'package:homie/view/widget/labeled_input_box.dart';
 
 class SignUp extends StatelessWidget {
@@ -66,7 +67,7 @@ class SignUp extends StatelessWidget {
                             child: Icon(
                               Icons.add,
                               size: 40,
-                              color: Color(0xff444326), 
+                              color: Color(0xff444326),
                             ),
                           ),
                         ],
@@ -122,27 +123,12 @@ class SignUp extends StatelessWidget {
                     hint: "Enter your password again",
                   ),
                   SizedBox(height: 20),
-                  Align(
-                    alignment: Alignment.center,
-                    child: SizedBox(
-                      width: size.width * 0.35,
-                      height: size.height * 0.06,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff444326),
-                          elevation: 10,
-                        ),
-                        child: Text(
-                          "Sign up",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: "Tajawal",
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomButton(name: "as Renter"),
+                      CustomButton(name: "as Lanlord"),
+                    ],
                   ),
                   SizedBox(height: 30),
                   GestureDetector(
